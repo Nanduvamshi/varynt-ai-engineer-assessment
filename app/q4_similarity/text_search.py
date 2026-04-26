@@ -1,25 +1,14 @@
-"""Q4 — Text similarity search over a corpus of leads/assets.
-
-Embeds the corpus once at module import time, caches embeddings in memory
-(numpy float32). Cosine similarity over <1000 vectors does not need FAISS;
-plain numpy matmul is fast enough and removes a dependency the reviewer
-would otherwise have to install.
-"""
-
 from __future__ import annotations
-
 import json
 import logging
 from functools import lru_cache
 from pathlib import Path
 from typing import Optional
-
 import numpy as np
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
-
 _CORPUS_PATH = Path(__file__).parent / "data" / "texts.json"
 _MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
@@ -49,7 +38,7 @@ def _load_corpus() -> tuple[list[dict], np.ndarray]:
     model = _load_model()
     texts = [item["text"] for item in items]
     embeddings = model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
-    return items, np.asarray(embeddings, dtype=np.float32)
+    return (items, np.asarray(embeddings, dtype=np.float32))
 
 
 def search_text(query: str, top_k: int = 3) -> TextSearchResult:
@@ -57,7 +46,6 @@ def search_text(query: str, top_k: int = 3) -> TextSearchResult:
     model = _load_model()
     q_emb = model.encode([query], normalize_embeddings=True, show_progress_bar=False)
     q_emb = np.asarray(q_emb, dtype=np.float32)
-    # Cosine similarity = dot product since both sides are L2-normalized.
     scores = (corpus_emb @ q_emb.T).flatten()
     top_idx = np.argsort(-scores)[:top_k]
     hits = [

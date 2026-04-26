@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-
 from app.q1_classifier.router import router as classifier_router
 from app.q2_routing.router import router as routing_router
 from app.q4_similarity.router import router as similarity_router

@@ -1,14 +1,9 @@
-"""FastAPI routes for Q4: text + face similarity search."""
-
 from __future__ import annotations
-
 from pathlib import Path
 import shutil
 import tempfile
-
 from fastapi import APIRouter, File, HTTPException, UploadFile
 from pydantic import BaseModel
-
 from app.q4_similarity.text_search import TextSearchResult, search_text
 from app.q4_similarity.face_search import FaceSearchResult, search_face
 

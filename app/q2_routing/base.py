@@ -1,16 +1,6 @@
-"""Provider abstraction for Q2 multi-modal generation routing.
-
-A provider is anything that turns a prompt into a hosted asset URL. Each
-modality (image / video / voice) defines its own subclass tree, but they
-all conform to the same `generate()` signature so the router can stay
-modality-agnostic.
-"""
-
 from __future__ import annotations
-
 from abc import ABC, abstractmethod
 from typing import Literal
-
 from pydantic import BaseModel, Field
 
 Modality = Literal["image", "video", "voice"]
@@ -43,5 +33,4 @@ class BaseProvider(ABC):
     modality: Modality
 
     @abstractmethod
-    def generate(self, prompt: str, force_fail: bool = False) -> GenerationResult:
-        ...
+    def generate(self, prompt: str, force_fail: bool = False) -> GenerationResult: ...

@@ -1,12 +1,5 @@
-"""Mock image providers — return a deterministic fake URL.
-
-In production these would call DALL-E 3, Stable Diffusion XL via Replicate,
-or a self-hosted ComfyUI inference server. The interface stays the same.
-"""
-
 import hashlib
 import time
-
 from app.q2_routing.base import BaseProvider, GenerationResult
 from app.q5_resilience.retry import TransientProviderError
 

@@ -1,7 +1,4 @@
-"""FastAPI route for Q1: POST /classify."""
-
 from fastapi import APIRouter, HTTPException
-
 from app.q1_classifier.classifier import LeadInput, LeadResponse, classify_lead
 from app.q5_resilience.retry import PermanentProviderError, TransientProviderError
 

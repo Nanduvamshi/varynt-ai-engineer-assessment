@@ -1,8 +1,5 @@
-"""Mock video providers."""
-
 import hashlib
 import time
-
 from app.q2_routing.base import BaseProvider, GenerationResult
 from app.q5_resilience.retry import TransientProviderError
 
