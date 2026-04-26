@@ -1,7 +1,37 @@
 import os
 
 os.environ["MOCK_OPENAI"] = "1"
-from app.q1_classifier.classifier import LeadInput, classify_lead
+from app.q1_classifier.classifier import Classification, LeadInput, classify_lead
+
+
+def test_missing_signals_coerces_string_to_list():
+    c = Classification(
+        category="cold",
+        confidence=0.5,
+        reasoning="x",
+        missing_signals="budget",
+    )
+    assert c.missing_signals == ["budget"]
+
+
+def test_missing_signals_coerces_csv_string():
+    c = Classification(
+        category="cold",
+        confidence=0.5,
+        reasoning="x",
+        missing_signals="budget, timeline ,team_size",
+    )
+    assert c.missing_signals == ["budget", "timeline", "team_size"]
+
+
+def test_missing_signals_accepts_list_unchanged():
+    c = Classification(
+        category="cold",
+        confidence=0.5,
+        reasoning="x",
+        missing_signals=["a", "b"],
+    )
+    assert c.missing_signals == ["a", "b"]
 
 
 def test_hot_lead_classified_hot():

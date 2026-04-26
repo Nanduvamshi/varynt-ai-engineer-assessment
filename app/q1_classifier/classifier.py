@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Literal, Optional
 from openai import OpenAI, APIError, APIConnectionError, RateLimitError, APITimeoutError
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from app import config
 from app.q5_resilience.retry import (
     TransientProviderError,
@@ -34,6 +34,15 @@ class Classification(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
     reasoning: str
     missing_signals: list[str] = Field(default_factory=list)
+
+    @field_validator("missing_signals", mode="before")
+    @classmethod
+    def _coerce_missing_signals(cls, v):
+        if v is None:
+            return []
+        if isinstance(v, str):
+            return [s.strip() for s in v.split(",") if s.strip()]
+        return v
 
 
 class LeadResponse(BaseModel):
