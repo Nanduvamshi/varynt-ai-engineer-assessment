@@ -1,0 +1,24 @@
+{
+  "input": {
+    "email": "someone@example.com"
+  },
+  "output": {
+    "classification": {
+      "category": "cold",
+      "confidence": 0.1,
+      "reasoning": "The lead profile is missing critical fields such as name, company, role, and budget, making it impossible to assess intent or fit.",
+      "missing_signals": [
+        "name",
+        "company",
+        "role",
+        "source",
+        "message",
+        "budget",
+        "timeline",
+        "team_size"
+      ]
+    },
+    "suggested_reply": "Hi there,\n\nI noticed that your inquiry is missing some details that could help me understand your needs better. Could you share your name and company, as well as what specific challenges you’re looking to address? This way, I can provide you with more tailored information.\n\nLooking forward to hearing from you!\n\nSam from KeaBuilder",
+    "source": "openai"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "input": {
+    "modality": "voice",
+    "prompt": "welcome message in a warm female voice",
+    "provider": null,
+    "force_fail": false
+  },
+  "output": {
+    "modality": "voice",
+    "provider": "elevenlabs-multilingual-v2",
+    "asset_url": "https://cdn.varynt.example/voice/5a7cf01dd929.mp3",
+    "duration_ms": 40,
+    "cached": false,
+    "fallback_used": false
+  }
+}

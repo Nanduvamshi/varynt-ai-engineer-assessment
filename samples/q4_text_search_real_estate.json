@@ -1,0 +1,21 @@
+{
+  "query": "I run a real estate firm and want to capture inbound leads",
+  "hits": [
+    {
+      "id": "lead-001",
+      "text": "Real estate agent in Austin needing lead capture funnels for new listings",
+      "score": 0.5872640609741211
+    },
+    {
+      "id": "lead-009",
+      "text": "Real estate broker office wants lead routing across 8 agents with hot/warm scoring",
+      "score": 0.4440411925315857
+    },
+    {
+      "id": "lead-011",
+      "text": "Local plumber wants emergency-call lead capture with SMS notifications",
+      "score": 0.3621380031108856
+    }
+  ],
+  "model": "sentence-transformers/all-MiniLM-L6-v2"
+}

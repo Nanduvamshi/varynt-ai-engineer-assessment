@@ -1,0 +1,16 @@
+{
+  "input": {
+    "modality": "video",
+    "prompt": "15s testimonial-style intro for a fitness coach",
+    "provider": null,
+    "force_fail": false
+  },
+  "output": {
+    "modality": "video",
+    "provider": "runway-gen3",
+    "asset_url": "https://cdn.varynt.example/vid/52a64d90d905.mp4",
+    "duration_ms": 120,
+    "cached": false,
+    "fallback_used": false
+  }
+}

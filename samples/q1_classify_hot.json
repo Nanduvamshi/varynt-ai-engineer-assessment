@@ -1,0 +1,23 @@
+{
+  "input": {
+    "name": "Priya Mehta",
+    "email": "priya@northstarrealty.com",
+    "company": "NorthStar Realty",
+    "role": "Marketing Lead",
+    "source": "webinar",
+    "message": "We're ready to roll out lead-capture funnels for 8 agents this month. What does pricing look like for a mid-tier plan?",
+    "budget": "$3,000-5,000/mo",
+    "timeline": "this month",
+    "team_size": 12
+  },
+  "output": {
+    "classification": {
+      "category": "hot",
+      "confidence": 0.9,
+      "reasoning": "The lead has clear buying intent with a specific timeline ('this month'), a budget range ('$3,000-5,000/mo'), and is ready to implement lead-capture funnels for 8 agents.",
+      "missing_signals": []
+    },
+    "suggested_reply": "Hi Priya,\n\nIt's great to hear that NorthStar Realty is ready to roll out lead-capture funnels for 8 agents this month! Given your budget of $3,000-5,000 per month, I can provide you with the details on our mid-tier plan. \n\nWould you be available for a quick call this week? I can walk you through the pricing and features. How does Wednesday at 2 PM or Thursday at 10 AM sound?\n\nLooking forward to connecting!\n\nSam from KeaBuilder",
+    "source": "openai"
+  }
+}

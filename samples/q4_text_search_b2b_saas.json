@@ -1,0 +1,21 @@
+{
+  "query": "I have a SaaS launch coming up and need a high-converting funnel",
+  "hits": [
+    {
+      "id": "lead-003",
+      "text": "B2B SaaS founder evaluating funnel builders for an upcoming product launch",
+      "score": 0.5792785286903381
+    },
+    {
+      "id": "lead-005",
+      "text": "Marketing agency managing 12 client funnels needs white-label support",
+      "score": 0.4240593910217285
+    },
+    {
+      "id": "lead-020",
+      "text": "B2B agency wants a webinar registration funnel with lead scoring on attendance",
+      "score": 0.38451075553894043
+    }
+  ],
+  "model": "sentence-transformers/all-MiniLM-L6-v2"
+}

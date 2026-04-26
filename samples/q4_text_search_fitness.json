@@ -1,0 +1,21 @@
+{
+  "query": "Help me build a paid newsletter for my fitness clients",
+  "hits": [
+    {
+      "id": "lead-007",
+      "text": "Personal trainer launching a paid newsletter with content gating",
+      "score": 0.7477794885635376
+    },
+    {
+      "id": "lead-019",
+      "text": "Nonprofit running a fundraising campaign needs donation page + email follow-up",
+      "score": 0.4772750735282898
+    },
+    {
+      "id": "lead-002",
+      "text": "Yoga studio owner wants a class booking page with email automation",
+      "score": 0.4264312982559204
+    }
+  ],
+  "model": "sentence-transformers/all-MiniLM-L6-v2"
+}

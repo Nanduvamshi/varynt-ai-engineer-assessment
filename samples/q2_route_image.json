@@ -1,0 +1,16 @@
+{
+  "input": {
+    "modality": "image",
+    "prompt": "modern real-estate hero banner with warm lighting",
+    "provider": null,
+    "force_fail": false
+  },
+  "output": {
+    "modality": "image",
+    "provider": "openai-dalle3",
+    "asset_url": "https://cdn.varynt.example/img/16626baf3140.png",
+    "duration_ms": 50,
+    "cached": false,
+    "fallback_used": false
+  }
+}

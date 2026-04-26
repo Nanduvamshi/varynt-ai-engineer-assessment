@@ -1,0 +1,22 @@
+{
+  "input": {
+    "name": "Alex",
+    "source": "ad",
+    "message": "Just curious, browsing different tools. Maybe later this year."
+  },
+  "output": {
+    "classification": {
+      "category": "cold",
+      "confidence": 0.2,
+      "reasoning": "The lead expresses vague curiosity without any specific intent, budget, or timeline.",
+      "missing_signals": [
+        "budget",
+        "timeline",
+        "company",
+        "role"
+      ]
+    },
+    "suggested_reply": "Hi Alex,\n\nI see you're browsing different tools and are curious about what might fit your needs later this year. I’d love to know more about what specific features or solutions you're looking for. This will help me provide you with relevant information when you're ready to explore options. \n\nLooking forward to hearing from you!\n\nSam from KeaBuilder",
+    "source": "openai"
+  }
+}

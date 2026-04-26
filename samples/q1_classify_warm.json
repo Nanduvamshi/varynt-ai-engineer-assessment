@@ -1,0 +1,24 @@
+{
+  "input": {
+    "name": "Bob Chen",
+    "email": "bob@bobyoga.io",
+    "company": "Bob Yoga Studio",
+    "role": "Owner",
+    "source": "organic",
+    "message": "Looking into funnel builders for class signups. Comparing options. How does pricing work?",
+    "timeline": "next quarter"
+  },
+  "output": {
+    "classification": {
+      "category": "warm",
+      "confidence": 0.7,
+      "reasoning": "The lead shows genuine interest in funnel builders and is comparing options, but lacks a clear budget and team size.",
+      "missing_signals": [
+        "budget",
+        "team_size"
+      ]
+    },
+    "suggested_reply": "Hi Bob,\n\nThanks for reaching out! I see you're exploring funnel builders for class signups at Bob Yoga Studio. I'd be happy to help clarify how our pricing works and how we can support your needs. \n\nIf you have any specific features in mind or want to discuss your options further, feel free to ask. I'm here to assist you in making the best choice for your studio. \n\nLooking forward to hearing from you!\n\nSam from KeaBuilder",
+    "source": "openai"
+  }
+}

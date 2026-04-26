@@ -1,0 +1,23 @@
+{
+  "query_file": "face_1.jpg",
+  "hits": [
+    {
+      "file": "face_1.jpg",
+      "score": 1.000000238418579
+    },
+    {
+      "file": "face_7.jpg",
+      "score": 0.1390560120344162
+    },
+    {
+      "file": "face_8.jpg",
+      "score": 0.12357833981513977
+    },
+    {
+      "file": "face_5.jpg",
+      "score": 0.05415010824799538
+    }
+  ],
+  "model": "insightface/buffalo_l",
+  "note": null
+}
